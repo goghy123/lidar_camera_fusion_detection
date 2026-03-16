@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>l2i_fusion_detection</name>
+  <name>lidar_camera_fusion_detection</name>
   <version>1.0.0</version>
   <description>A ROS2 package for lidar and camera fusion with detection, using C++.</description>
 
-  <maintainer email="agm.musalami@gmail.com">AbdullahGM1</maintainer>
+  <maintainer email="GAO-Zhenyang@outlook.com">Goghy</maintainer>
   <license>MIT</license>
 
   <!-- Build tools -->
@@ -26,6 +26,7 @@
   <depend>yolo_msgs</depend>
   <depend>message_filters</depend>
   <depend>pcl_ros</depend>
+  <depend>visualization_msgs</depend>
 
 
   <!-- Export section -->

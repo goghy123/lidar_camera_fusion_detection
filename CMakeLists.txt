@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(l2i_fusion_detection)
+project(lidar_camera_fusion_detection)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -24,6 +24,7 @@ find_package(Eigen3 REQUIRED)
 find_package(yolo_msgs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(PCL REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 
 # Include directories
@@ -36,10 +37,10 @@ include_directories(
 )
 
 # Declare the executable
-add_executable(lidar_camera_fusion_with_detection src/lidar_camera_fusion_with_detection.cpp)
+add_executable(filter_fusion_detection src/filter_fusion_detection.cpp)
 
 # Specify libraries to link a library or executable target against
-ament_target_dependencies(lidar_camera_fusion_with_detection
+ament_target_dependencies(filter_fusion_detection
   rclcpp
   sensor_msgs
   vision_msgs
@@ -54,10 +55,11 @@ ament_target_dependencies(lidar_camera_fusion_with_detection
   OpenCV
   yolo_msgs
   message_filters
+  visualization_msgs
 )
 
 # Link additional libraries
-target_link_libraries(lidar_camera_fusion_with_detection
+target_link_libraries(filter_fusion_detection
   ${OpenCV_LIBRARIES}
   ${Eigen3_LIBRARIES}
   ${PCL_LIBRARIES}
@@ -65,7 +67,7 @@ target_link_libraries(lidar_camera_fusion_with_detection
 
 # Install the executable
 install(TARGETS
-  lidar_camera_fusion_with_detection
+  filter_fusion_detection
   DESTINATION lib/${PROJECT_NAME}
 )
 
