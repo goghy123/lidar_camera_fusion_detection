@@ -4,6 +4,7 @@
 #include <yolo_msgs/msg/detection_array.hpp>
 #include <geometry_msgs/msg/pose_array.hpp>
 #include <geometry_msgs/msg/point.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
 #include <image_geometry/pinhole_camera_model.h>
 #include <cv_bridge/cv_bridge.h>
 #include <pcl_conversions/pcl_conversions.h>
@@ -24,7 +25,7 @@
 #include <thread>
 #include <vector>
 #include <mutex>
-#include <visualization_msgs/msg/marker_array.hpp>
+
 
 
 
