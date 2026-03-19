@@ -41,7 +41,7 @@ def generate_launch_description():
         ]),
         launch_arguments={
             'model': '/home/goghy/Projects/yolo_models/plate-bowl-spoon-super.pt',
-            'threshold': '0.5',
+            'threshold': '0.6',
             'input_image_topic': '/camera/camera/color/image_raw',
             'namespace': 'rgb',
             'device': 'cpu'
